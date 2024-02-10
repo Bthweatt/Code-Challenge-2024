@@ -1,4 +1,4 @@
-# Code-Challenge-2024
+# Code Challenge 2024
 Dynamix Code Challenge for Frontend Developer Applications
 
 ## Getting Started
@@ -26,8 +26,8 @@ Start by forking the repository to your own GitHub account. This creates a copy 
 After forking, clone the repository to create a local copy on your computer. Replace `YourUsername` with your GitHub username.
 
 ```bash
-git clone https://github.com/YourUsername/project-name.git
-cd project-name
+git clone https://github.com/YourUsername/Code-Challenge-2024.git
+cd Code-Challenge-2024
 ```
 
 ### Installing Dependencies
@@ -47,7 +47,7 @@ npm run initialize
 
 ### Using Webpack with ESLint and StyleLint
 
-This project uses Webpack for bundling, along with eslint and stylelint to ensure code quality and style consistency. The Webpack configuration includes loaders that run eslint and stylelint as part of the build process, automatically checking your JavaScript and CSS for common errors and style violations.
+This project uses Webpack for bundling, along with eslint and stylelint to ensure code quality and style consistency. The Webpack configuration includes loaders that run eslint and stylelint as part of the build process, automatically checking your JavaScript and CSS for common errors and style violations. Disabling the linting rules is highly discouraged.
 
 Watching for File Changes
 To automatically rebuild your project when files change, use:
@@ -62,6 +62,6 @@ To maintain code quality, this project uses pre-commit hooks that run eslint and
 You can manually run the linters with the following commands:
 
 ```bash
-npm run lint:js
-npm run lint:css
+npm run lintcss
+npm run lintjs
 ```
