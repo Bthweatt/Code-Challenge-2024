@@ -1,0 +1,32 @@
+// ****************************************************************************/
+//	Styles used for the structure of our pages
+// ****************************************************************************/
+
+.width-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 3em;
+
+	@media screen and (max-width: 1000px) {
+		padding: 0 2em;
+	}
+
+	@media screen and (max-width: 700px) {
+		padding: 0 1em;
+	}
+}
+
+.hidden { display: none; }
+
+.text-center { text-align: center; }
+
+.sr-only {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0, 1px, 1px, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}

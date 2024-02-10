@@ -1,0 +1,141 @@
+// ****************************************************************************/
+//  Use this file to create styles that are in multiple places across the site
+// ****************************************************************************/
+
+.content-container {
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin: 0;
+		font-weight: 700;
+		font-family: var(--heading-font);
+
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+
+	h2 {
+		font-size: clamp-calc(1.75em, 2.5em);
+		line-height: 1.25;
+	}
+
+	h3 {
+		font-size: clamp-calc(1.125em, 1.5em);
+		line-height: 1.25;
+	}
+
+	h4 {
+		font-size: clamp-calc(1em, 1.25em);
+		line-height: 1.25;
+	}
+
+	h5 {
+		font-size: 1em;
+		line-height: 1.5;
+	}
+
+	p {
+		font-weight: 400;
+		font-size: 1em;
+		line-height: 1.5;
+
+		& + * {
+			margin-top: 1em;
+		}
+	}
+
+	strong,
+	b { font-weight: 700; }
+
+	em { font-style: italic; }
+
+	small { font-size: 0.75em; }
+
+	figure {
+		img {
+			display: block;
+		}
+
+		figcaption {
+			background-color: #f1f1f1;
+		}
+	}
+
+	a:not(.btn) {
+		border-bottom: 1px dotted;
+		font-weight: 700;
+		text-decoration: none;
+
+		&:hover,
+		&:focus { border-bottom: 1px solid; }
+	}
+
+	& + .btn-wrapper {
+		margin-top: 1em;
+	}
+}
+
+.section-subtitle {
+	font-weight: 700;
+	font-family: var(--subtitle-font);
+	line-height: 1.25;
+
+	strong,
+	b { font-weight: 700; }
+
+	em { font-style: italic; }
+
+	& + .content-container,
+	& + .btn-wrapper {
+		margin-top: 1em;
+	}
+}
+
+.section-title {
+	color: #333;
+	font-weight: 400;
+	font-size: clamp-calc(1.75em, 2.5em);
+	font-family: var(--heading-font);
+	line-height: 1.25;
+
+	strong,
+	b { font-weight: 700; }
+
+	em { font-style: italic; }
+
+	& + .section-subtitle,
+	& + .content-container,
+	& + .btn-wrapper {
+		margin-top: 1em;
+	}
+}
+
+// ****************************************************************************/
+//	Buttons
+// ****************************************************************************/
+
+.btn {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	padding: 0.675em 1.5em;
+	background-color: #f1f1f1;
+	color: #000;
+	font-weight: 700;
+	font-size: 1em;
+	line-height: 1.25;
+	text-decoration: none;
+	transition: background-color 300ms ease;
+
+	strong,
+	b { font-weight: 700; }
+
+	em { font-style: italic; }
+
+	&:hover,
+	&:focus {
+		background-color: #ccc;
+	}
+}

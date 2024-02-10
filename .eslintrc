@@ -1,0 +1,64 @@
+{
+    root: true,
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "ignorePatterns" : [
+        "modal-video.js" // plugin not originally our code
+    ],
+    "rules": {
+        "no-console": [
+            "off"
+        ],
+        "no-underscore-dangle": [
+            "off" // leaflet has these
+        ],
+        "new-cap": [
+            "error",
+            {
+                "properties": false // leaflet needs this
+            }
+        ],
+        "radix": [
+            "error",
+            "as-needed"
+        ],
+        "no-tabs": [
+            "off"  
+        ],
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "eol-last": [
+            "error", 
+            "always"
+        ],
+        "no-multi-spaces": "error",
+        "no-trailing-spaces": "error",
+        "switch-colon-spacing": [
+            "error"
+        ]
+    }
+}

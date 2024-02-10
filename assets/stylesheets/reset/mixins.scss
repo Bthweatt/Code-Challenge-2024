@@ -1,0 +1,44 @@
+// ****************************************************************************/
+//  Site Setup
+// ****************************************************************************/
+
+$site-root: 'Code-Challenge-2024';	// Change this to folder name of site
+
+// ****************************************************************************/
+//	image/svg paths
+// ****************************************************************************/
+
+$path: './images/';
+$svg: './images/svg/';
+
+// ****************************************************************************/
+//	mixins
+// ****************************************************************************/
+
+@mixin pseudo {
+	content: '';
+	position: absolute;
+	display: block;
+	pointer-events: none;
+}
+
+@mixin mask-svg-set {
+	mask-position: center;
+	mask-size: contain;
+	mask-repeat: no-repeat;
+}
+
+@mixin mask-svg-img($image: 'dynamix-logo.svg') {
+	mask-image: url('#{$svg}#{$image}');
+}
+
+@mixin retina($bg-image, $size: contain, $file-type: 'png') {
+	background-image: url('#{$path}#{$bg-image}.#{$file-type}');
+	background-size: $size;
+	background-repeat: no-repeat;
+
+	@media only screen and (min-resolution: 144dpi) {
+		background-image: url('#{$path}#{$bg-image}@2x.#{$file-type}');
+		background-size: $size;
+	}
+}
