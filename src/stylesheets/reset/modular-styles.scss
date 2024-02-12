@@ -17,17 +17,17 @@
 	}
 
 	h2 {
-		font-size: clamp-calc(1.75em, 2.5em);
+		font-size: 2.5em;
 		line-height: 1.25;
 	}
 
 	h3 {
-		font-size: clamp-calc(1.125em, 1.5em);
+		font-size: 1.5em;
 		line-height: 1.25;
 	}
 
 	h4 {
-		font-size: clamp-calc(1em, 1.25em);
+		font-size: 1.25em;
 		line-height: 1.25;
 	}
 
@@ -50,18 +50,6 @@
 	b { font-weight: 700; }
 
 	em { font-style: italic; }
-
-	small { font-size: 0.75em; }
-
-	figure {
-		img {
-			display: block;
-		}
-
-		figcaption {
-			background-color: #f1f1f1;
-		}
-	}
 
 	a:not(.btn) {
 		border-bottom: 1px dotted;
@@ -96,7 +84,7 @@
 .section-title {
 	color: #333;
 	font-weight: 400;
-	font-size: clamp-calc(1.75em, 2.5em);
+	font-size: 2.5em;
 	font-family: var(--heading-font);
 	line-height: 1.25;
 

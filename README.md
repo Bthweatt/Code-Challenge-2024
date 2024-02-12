@@ -49,11 +49,10 @@ npm run initialize
 
 This project uses Webpack for bundling, along with eslint and stylelint to ensure code quality and style consistency. The Webpack configuration includes loaders that run eslint and stylelint as part of the build process, automatically checking your JavaScript and CSS for common errors and style violations. Disabling the linting rules is highly discouraged.
 
-Watching for File Changes
-To automatically rebuild your project when files change, use:
+We have installed a local dev server to build this project, to start that you can run the following command
 
 ```bash
-npm run watch
+npm run dev
 ```
 
 ### Pre-Commit Hooks
@@ -65,3 +64,18 @@ You can manually run the linters with the following commands:
 npm run lintcss
 npm run lintjs
 ```
+
+###Editing Files
+When contributing to this project, you'll mainly interact with four key files. Below is a guide on where to find these files and some tips on editing them:
+
+####HTML:
+
+index.html is located at the root of the project. This file serves as the entry point for the projects's HTML structure.
+
+####JavaScript:
+
+The testimonial slider functionality is handled by a JavaScript file that is already configured to compile with Webpack. You can find and edit this file at: /src/javascripts/layout-testimonial-slider.js.
+
+####SCSS:
+
+The styling for the project is managed using SCSS, allowing for more organized and maintainable CSS. The SCSS files are located in /src/stylesheets/layouts/. There are two main files here that are already configured to compile with Webpack, ensuring that any changes you make will be automatically reflected during the build process.

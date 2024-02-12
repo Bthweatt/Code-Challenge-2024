@@ -1,0 +1,360 @@
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/stylesheets/critical.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  position: relative;
+  display: block;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-family: var(--content-font);
+  line-height: 1.5;
+}
+@media screen and (max-width: 950px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: #f1f1f1;
+  color: #000;
+  font-size: 1em;
+  cursor: pointer;
+}
+button:hover, button:focus {
+  background-color: #ccc;
+}
+
+details summary {
+  list-style-image: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+dialog {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--content-font);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 4em 0;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.width-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3em;
+}
+@media screen and (max-width: 1000px) {
+  .width-container {
+    padding: 0 2em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .width-container {
+    padding: 0 1em;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 1px, 1px, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.content-container h2,
+.content-container h3,
+.content-container h4,
+.content-container h5 {
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+.content-container h2 + *,
+.content-container h3 + *,
+.content-container h4 + *,
+.content-container h5 + * {
+  margin-top: 1rem;
+}
+.content-container h2 {
+  font-size: clamp-calc(1.75em, 2.5em);
+  line-height: 1.25;
+}
+.content-container h3 {
+  font-size: clamp-calc(1.125em, 1.5em);
+  line-height: 1.25;
+}
+.content-container h4 {
+  font-size: clamp-calc(1em, 1.25em);
+  line-height: 1.25;
+}
+.content-container h5 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+.content-container p {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.content-container p + * {
+  margin-top: 1em;
+}
+.content-container strong,
+.content-container b {
+  font-weight: 700;
+}
+.content-container em {
+  font-style: italic;
+}
+.content-container small {
+  font-size: 0.75em;
+}
+.content-container figure img {
+  display: block;
+}
+.content-container figure figcaption {
+  background-color: #f1f1f1;
+}
+.content-container a:not(.btn) {
+  border-bottom: 1px dotted;
+  font-weight: 700;
+  text-decoration: none;
+}
+.content-container a:not(.btn):hover, .content-container a:not(.btn):focus {
+  border-bottom: 1px solid;
+}
+.content-container + .btn-wrapper {
+  margin-top: 1em;
+}
+
+.section-subtitle {
+  font-weight: 700;
+  font-family: var(--subtitle-font);
+  line-height: 1.25;
+}
+.section-subtitle strong,
+.section-subtitle b {
+  font-weight: 700;
+}
+.section-subtitle em {
+  font-style: italic;
+}
+.section-subtitle + .content-container, .section-subtitle + .btn-wrapper {
+  margin-top: 1em;
+}
+
+.section-title {
+  color: #333;
+  font-weight: 400;
+  font-size: clamp-calc(1.75em, 2.5em);
+  font-family: var(--heading-font);
+  line-height: 1.25;
+}
+.section-title strong,
+.section-title b {
+  font-weight: 700;
+}
+.section-title em {
+  font-style: italic;
+}
+.section-title + .section-subtitle, .section-title + .content-container, .section-title + .btn-wrapper {
+  margin-top: 1em;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.675em 1.5em;
+  background-color: #f1f1f1;
+  color: #000;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background-color 300ms ease;
+}
+.btn strong,
+.btn b {
+  font-weight: 700;
+}
+.btn em {
+  font-style: italic;
+}
+.btn:hover, .btn:focus {
+  background-color: #ccc;
+}

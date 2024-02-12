@@ -2,3 +2,5 @@ node_modules/
 layouts/inline-styles.php
 output/
 npm-debug.log
+.DS_Store
+**/.DS_Store

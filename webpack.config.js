@@ -5,8 +5,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const siteRoot = path.basename(path.resolve(process.cwd()));
-const publicPath = `/assets/output/`;
-const jsFileName = 'js/[name].js?version=[fullhash]';
+const publicPath = `/dist`;
 
 const mapFilenamesToEntries = (pattern) => glob
 	.sync(pattern)
@@ -15,18 +14,18 @@ const mapFilenamesToEntries = (pattern) => glob
 		return { ...entries, [name]: `./${filename}` };
 	}, {});
 
-module.exports = [
-	{
-		name: 'css',
+module.exports = {
+		name: 'code-challenge',
 		mode: 'development',
 		entry: {
-			critical: './assets/stylesheets/critical.scss',
-			...mapFilenamesToEntries('./assets/stylesheets/layouts/*.scss')
+			critical: './src/stylesheets/critical.scss',
+			'layout-testimonial-slider': './src/javascripts/layout-testimonial-slider.js',
 		},
 		output: {
-			filename: 'css/[name].js',
-			publicPath,
-			path: path.resolve(__dirname, './assets/output'),
+			filename: 'js/[name].js',
+			publicPath: '/dist',
+			path: path.resolve(__dirname, 'dist'),
+			clean: true,
 		},
 		module: {
 			rules: [
@@ -48,50 +47,33 @@ module.exports = [
 						'sass-loader',
 					],
 				},
-			],
-		},
-		plugins: [
-			new StyleLintPlugin({
-				fix: false,
-			}),
-
-			new MiniCssExtractPlugin({
-				filename: 'css/[name].css',
-			}),
-		],
-	}, {
-		name: 'js',
-		mode: 'development',
-		entry: {
-			slider: './assets/javascripts/slider.js',
-		},
-		output: {
-			filename: jsFileName,
-			publicPath,
-			path: path.resolve(__dirname, './assets/output'),
-		},
-		devtool: 'nosources-source-map',
-		module: {
-			rules: [
-				{
-					test: /\.vue$/,
-					loader: 'vue-loader',
-				},
 				{
 					test: /\.js$/,
-					exclude: /node_modules/,
 					use: {
 						loader: 'babel-loader',
 						options: {
-							presets: ['@babel/preset-env'],
-						},
-					},
-				},
-			],
+							presets: ['@babel/preset-env']
+						}
+					}
+				}
+			]
 		},
-
 		plugins: [
-			new ESLintPlugin(),
+			new MiniCssExtractPlugin({
+				filename: 'css/[name].css',
+			}),
+
+			new StyleLintPlugin({
+				files: 'src/**/*.scss',
+				fix: false,
+			}),
+
+			new ESLintPlugin({
+				extensions: ['js']
+			}),
 		],
-	},
-];
+		devServer: {
+			static: './',
+			hot: true,
+		},
+	};
