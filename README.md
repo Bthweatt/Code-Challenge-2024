@@ -65,17 +65,17 @@ npm run lintcss
 npm run lintjs
 ```
 
-###Editing Files
+### Editing Files
 When contributing to this project, you'll mainly interact with four key files. Below is a guide on where to find these files and some tips on editing them:
 
-####HTML:
+#### HTML:
 
 index.html is located at the root of the project. This file serves as the entry point for the projects's HTML structure.
 
-####JavaScript:
+#### JavaScript:
 
 The testimonial slider functionality is handled by a JavaScript file that is already configured to compile with Webpack. You can find and edit this file at: /src/javascripts/layout-testimonial-slider.js.
 
-####SCSS:
+#### SCSS:
 
 The styling for the project is managed using SCSS, allowing for more organized and maintainable CSS. The SCSS files are located in /src/stylesheets/layouts/. There are two main files here that are already configured to compile with Webpack, ensuring that any changes you make will be automatically reflected during the build process.
