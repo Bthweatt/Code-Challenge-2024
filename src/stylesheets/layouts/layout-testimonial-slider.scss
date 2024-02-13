@@ -1,1 +1,50 @@
 // testimonial slider styles
+
+// Parent slider container selector
+.layout-testimonial-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .slider-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .slides-wrapper {
+          display: flex;
+
+          .slide {
+              display: none; 
+
+              &.active {
+                  display: flex; 
+              }
+          }
+      }
+  }
+
+  .column {
+      flex: 1;
+  }
+
+  
+  .control-item {
+      background-color: #f0f0f0;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+  }
+
+  .image-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .image-wrapper-item {
+          max-width: 100%;
+          height: auto;
+      }
+  }
+}
