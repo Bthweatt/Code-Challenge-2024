@@ -1,6 +1,7 @@
 // testimonial slider styles
 
 // Parent slider container selector
+.header-wrapper{
 .section-title{
 
 
@@ -13,14 +14,17 @@
 .content-container{
 
    
-    text-align: left;
+    text-align: center;
+    padding: 0px 295px 30px 295px;
+
+    
 
 
 
 }
 .btn-wrapper{
 
-
+    font-size: 20px;
     text-align: center;
 .btn{
     color: #18a4df;
@@ -33,6 +37,7 @@ svg{
   color: #24a7e0;
 }
  
+  }
 }
 
 
@@ -50,14 +55,23 @@ svg{
       align-items: center;
       width: 100%;
       position: relative;
+      flex-direction: column;
 
       .slides-wrapper {
           display: flex;
+          height: 750px;
+          justify-content: center;
+          
 
           .slide {
               display: none; 
-              border-radius: 8px;
+              border-radius: 25px;
               background-color: #f5e7f6;
+              height: 50%;
+              position: relative;
+              overflow: hidden;
+              width: 85%;
+              z-index: 1;
 
               &.active {
                   display: flex; 
@@ -65,12 +79,20 @@ svg{
                  
               }
           }
+          .quote{
+            width: 8%;
+            position: absolute;
+  z-index: -1;
+  top: 37px;
+  left: -39px;
+  color: #fcf2fb;
+          }
           .starWrap {
             display: flex;
             align-items: flex-start;
             flex-direction: row;
-            width: 135px;
-            height: 50px;
+            width: 170px;
+            height: 36px;
             .star{
                 width: 100%;
               }
@@ -85,14 +107,33 @@ svg{
   &.column-1{
     align-self: flex-start;
     flex-direction: column;
-    
+    position: relative;
+    top: 68px;
+    left: 100px;
+    width: 100%;
+    p.text{
+
+      position: absolute;
+      padding-top: 215px;
+      color: #2c7dbf;
+      font-weight: 600;
+      font-size: 18px;
+  
+     }
+     div.content-container{
+      width: 51%;
+      font-size: 19px;
+     }
    
   }
   &.column-2{
-    width: 25%;
+    width: 35%;
     align-self: flex-end;
-    
+    position: absolute; 
+    bottom: -86px; 
+    right: 0; 
   }
+  
 
   }
 
@@ -100,21 +141,28 @@ svg{
   .control-item {
       background-color: #f0f0f0;
       border: none;
-      padding: 10px 20px;
+    
       cursor: pointer;
       &.next{
         position: absolute;
         top: 212px;
         right: -77px;
       }
+      &.previous{
+        position: absolute;
+        top: 212px;
+        left: -100px;
+      }
   }
 
   .image-wrapper {
       width:100%;
+      max-width: 100%; 
+      max-height: 100%;
       
 
       .image-wrapper-item {
-          max-width: 100%;
+          width: 100%;
           height: auto;
       }
   }
