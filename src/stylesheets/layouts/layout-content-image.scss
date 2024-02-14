@@ -1,1 +1,39 @@
 // content image styles
+
+.content-feature-image{
+    .feature-image-wrap{
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        #header{
+            display: flex;
+            justify-content: center;
+        }
+        .content-image-btnwrap {
+            font-size: 20px;
+            text-align: center;
+            width: 50%;
+        
+            .btn {
+              color: #18a4df;
+              background-color: #fff;
+        
+              svg {
+                width: 3%;
+                padding-left: 4px;
+                color: #24a7e0;
+              }
+            }
+          }
+          #feature-image{
+            width: 475px;
+            height: 350px;
+            img{
+                height: 100%;
+                object-fit: cover;
+                border-radius: 25px;
+            }
+          }
+    }
+}
