@@ -2,6 +2,7 @@
 
 /* Parent slider container selector */
 .header-wrapper {
+
   /* Styles for section title */
   .section-title {
     color: #2c7dbf;
@@ -230,26 +231,31 @@
     .slide .content-container {
       width: 61% !important;
     }
+
     .header-wrapper .content-container {
       text-align: center;
       padding: 0 230px 30px;
     }
   }
+
   @media screen and (max-width: 1100px) {
     .slide .content-container {
       width: 68% !important;
       font-size: 16px !important;
     }
+
     .header-wrapper .content-container {
       text-align: center;
       padding: 0 190px 30px;
     }
   }
+
   @media screen and (max-width: 980px) {
     .content-container {
       padding: 0px;
       font-size: 15px !important;
     }
+
     .btn-wrapper {
       font-size: 16px;
     }
@@ -306,6 +312,7 @@
         }
 
         .control-item {
+
           &.next,
           &.previous {
             top: 50%;
@@ -329,18 +336,22 @@
 
   /* Transition styles */
   .transition-out-previous {
-    margin-left: 200%; /* Move the current slide out to the left */
+    margin-left: 200%;
+    /* Move the current slide out to the left */
   }
 
   .transition-in-next {
-    margin-left: 0; /* Move the new slide in from the right */
+    margin-left: 0;
+    /* Move the new slide in from the right */
   }
 
   .transition-out-next {
-    margin-left: -200%; /* Move the current slide out to the right */
+    margin-left: -200%;
+    /* Move the current slide out to the right */
   }
 
   .transition-in-previous {
-    margin-left: 0; /* Move the new slide in from the left */
+    margin-left: 0;
+    /* Move the new slide in from the left */
   }
 }
