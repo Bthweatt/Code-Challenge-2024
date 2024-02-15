@@ -1,7 +1,8 @@
-// testimonial slider styles
+/* Testimonial slider styles */
 
-// Parent slider container selector
+/* Parent slider container selector */
 .header-wrapper {
+  /* Styles for section title */
   .section-title {
     color: #2c7dbf;
     font-weight: 600;
@@ -9,20 +10,24 @@
     text-align: center;
   }
 
+  /* Styles for content container */
   .content-container {
     text-align: center;
     padding: 0 295px 30px;
   }
 
+  /* Styles for button wrapper */
   .btn-wrapper {
     font-size: 20px;
     text-align: center;
     margin-top: 0;
 
+    /* Styles for button */
     .btn {
       color: #18a4df;
       background-color: #fff;
 
+      /* Styles for SVG icon */
       svg {
         width: 3%;
         padding-left: 4px;
@@ -32,11 +37,13 @@
   }
 }
 
+/* Testimonial slider layout */
 .layout-testimonial-slider {
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  /* Styles for slider wrapper */
   .slider-wrapper {
     display: flex;
     justify-content: space-between;
@@ -45,12 +52,14 @@
     position: relative;
     flex-direction: column;
 
+    /* Styles for slides wrapper */
     .slides-wrapper {
       display: flex;
       height: 750px;
       justify-content: center;
       overflow: hidden;
 
+      /* Styles for individual slide */
       .slide {
         display: none;
         border-radius: 25px;
@@ -61,23 +70,24 @@
         width: 85%;
         z-index: 1;
         opacity: 0;
-        transform: translateX(0); 
-    transition: transform 0.5s ease, opacity 0.5s ease, margin-left 0.5s ease;
-        
+        transform: translateX(0);
+        transition: transform 0.5s ease, opacity 0.5s ease, margin-left 0.5s ease;
 
+        /* Styles for active slide */
         &.active {
           display: flex;
           flex-flow: column;
           transform: translateX(0);
           opacity: 1;
-          
         }
       }
 
+      /* Styles for specific slides */
       .slide:nth-child(n+2):nth-child(-n+3) .content-container {
         width: 60%;
       }
 
+      /* Styles for quote */
       .quote {
         width: 8%;
         position: absolute;
@@ -87,6 +97,7 @@
         color: #fcf2fb;
       }
 
+      /* Styles for star wrap */
       .starWrap {
         display: flex;
         align-items: flex-start;
@@ -101,11 +112,13 @@
     }
   }
 
+  /* Styles for columns */
   .column {
     flex: 1;
     display: flex;
     width: 50%;
 
+    /* Styles for column 1 */
     &.column-1 {
       align-self: flex-start;
       flex-direction: column;
@@ -114,6 +127,7 @@
       left: 100px;
       width: 100%;
 
+      /* Styles for text */
       p.text {
         position: absolute;
         padding-top: 215px;
@@ -122,12 +136,14 @@
         font-size: 18px;
       }
 
+      /* Styles for content container */
       div.content-container {
         width: 51%;
         font-size: 19px;
       }
     }
 
+    /* Styles for column 2 */
     &.column-2 {
       width: 35%;
       align-self: flex-end;
@@ -137,12 +153,15 @@
     }
   }
 
+  /* Styles for control items */
   .control-item {
     background-color: #2c7dbf;
     border: none;
     border-radius: 80px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    /* Styles for next control */
     &.next {
       position: absolute;
       top: 180px;
@@ -155,6 +174,7 @@
       }
     }
 
+    /* Styles for previous control */
     &.previous {
       position: absolute;
       top: 180px;
@@ -166,42 +186,49 @@
         width: 38%;
       }
     }
+
+    /* Hover and active styles */
     &:hover {
-      background-color: #1f5a87; 
+      background-color: #1f5a87;
     }
-  
+
     &:active {
-      background-color: #14557b; 
-      transition: none; 
+      background-color: #14557b;
+      transition: none;
     }
   }
 
+  /* Styles for image wrapper */
   .image-wrapper {
     width: 100%;
     max-width: 100%;
     max-height: 100%;
 
+    /* Styles for image wrapper item */
     .image-wrapper-item {
       width: 100%;
       height: auto;
     }
   }
 
+  /* Styles for main button */
   .main-btn {
     text-align: center;
     position: relative;
     bottom: 350px;
 
+    /* Styles for button */
     .btn {
       color: white;
       background-color: #2c7dbf;
       border-radius: 40px;
     }
   }
- 
+
+  /* Media queries for responsiveness */
   @media screen and (max-width: 1315px) {
-     .slide .content-container {
-      width: 61%!Important;
+    .slide .content-container {
+      width: 61% !important;
     }
     .header-wrapper .content-container {
       text-align: center;
@@ -210,8 +237,8 @@
   }
   @media screen and (max-width: 1100px) {
     .slide .content-container {
-      width: 68%!Important;
-      font-size: 16px!Important;
+      width: 68% !important;
+      font-size: 16px !important;
     }
     .header-wrapper .content-container {
       text-align: center;
@@ -219,68 +246,65 @@
     }
   }
   @media screen and (max-width: 980px) {
-    
-      .content-container {
-        padding: 0px;
-        font-size: 15px!Important;
-      }
-  
-      .btn-wrapper {
-        font-size: 16px;
-      }
-    
-  
+    .content-container {
+      padding: 0px;
+      font-size: 15px !important;
+    }
+    .btn-wrapper {
+      font-size: 16px;
+    }
+
     .layout-testimonial-slider {
       .slider-wrapper {
         .slides-wrapper {
           height: auto;
           flex-direction: column;
           align-items: center;
-  
+
           .slide {
             width: 100%;
             margin-bottom: 20px;
             height: auto;
             border-radius: 15px;
             overflow: hidden;
-  
+
             &.active {
               opacity: 1;
               transform: none;
             }
-  
+
             .quote {
               display: none;
             }
           }
-  
+
           .slide:nth-child(n+2):nth-child(-n+3) .content-container {
             width: 100%;
           }
         }
-  
+
         .column {
           &.column-1 {
             top: 0;
             left: 0;
             width: 100%;
-  
+
             p.text {
               padding-top: 30px;
               font-size: 16px;
             }
-  
+
             div.content-container {
               width: 100%;
               font-size: 16px;
             }
           }
-  
+
           &.column-2 {
             display: none;
           }
         }
-  
+
         .control-item {
           &.next,
           &.previous {
@@ -288,13 +312,13 @@
             transform: translateY(-50%);
             width: 40px;
             height: 40px;
-  
+
             img {
               width: 70%;
             }
           }
         }
-  
+
         .main-btn {
           bottom: auto;
           margin-bottom: 20px;
@@ -302,22 +326,21 @@
       }
     }
   }
-  
 
+  /* Transition styles */
   .transition-out-previous {
     margin-left: 200%; /* Move the current slide out to the left */
-}
+  }
 
-.transition-in-next {
+  .transition-in-next {
     margin-left: 0; /* Move the new slide in from the right */
-}
+  }
 
-.transition-out-next {
+  .transition-out-next {
     margin-left: -200%; /* Move the current slide out to the right */
-}
+  }
 
-.transition-in-previous {
+  .transition-in-previous {
     margin-left: 0; /* Move the new slide in from the left */
+  }
 }
-}
-

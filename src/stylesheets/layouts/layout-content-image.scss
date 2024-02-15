@@ -1,86 +1,117 @@
-// content image styles
-
-.content-feature-image{
+/* Content image styles */
+.content-feature-image {
   padding-top: 0;
   position: relative;
   top: -275px;
-    .feature-image-wrap{
 
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        .outer-wrap{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: flex-end;
-        
-            width: 62%;
-            .inner-wrap{
-              width: 91%;
-              h2{
-                color: #2d7dbd;
-                font-weight: 550;
-              }
-              .main-btn{
-                padding-top: 22px;
-                a{
-                  background-color: #2c7dbf;
-                  color: white;
-                  border-radius: 40px;
-                }
+  /* Styles for feature image wrapper */
+  .feature-image-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
 
-              }
-            }
-            .content-container-feature{
-              width: 100%;
-            }
+    /* Styles for outer wrap */
+    .outer-wrap {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 62%;
 
-            .list-items{
+      /* Styles for inner wrap */
+      .inner-wrap {
+        width: 91%;
 
-              display: flex;
-              ul{
-                padding-right:215px;
-                padding-top: 20px;
-                list-style: none;
-                white-space: nowrap;
-              }
-              .caret{
-                width: 15%;
-                height: 6%;
-                padding-right: 3px;
-              }
-            }
+        /* Styles for heading */
+        h2 {
+          color: #2d7dbd;
+          font-weight: 550;
         }
-        .content-image-btnwrap {
-            font-size: 20px;
-            text-align: center;
-            width: 50%;
-        
-            .btn {
-              color: #18a4df;
-              background-color: #fff;
-              text-align: left;
-              white-space: nowrap;
-              padding-left: 0px!Important;
-              padding-top: 3px;
-        
-              svg {
-                width: 4%;
-                padding-left: 4px;
-                color: #24a7e0;
-              }
-            }
+
+        /* Styles for main button */
+        .main-btn {
+          padding-top: 22px;
+
+          a {
+            background-color: #2c7dbf;
+            color: white;
+            border-radius: 40px;
           }
-          #feature-image{
-            width: 497px;
-            height: 413px;
-            img{
-                height: 100%;
-                object-fit: cover;
-                border-radius: 20px;
-                object-position: right;
-            }
-          }
+        }
+      }
+
+      /* Styles for content container feature */
+      .content-container-feature {
+        width: 100%;
+      }
+
+      /* Styles for list items */
+      .list-items {
+        display: flex;
+
+        /* Styles for unordered list */
+        ul {
+          padding-right: 30%;
+          padding-top: 20px;
+          list-style: none;
+          white-space: nowrap;
+        }
+
+        /* Styles for caret */
+        .caret {
+          width: 15%;
+          height: 6%;
+          padding-right: 3px;
+        }
+      }
     }
+
+    /* Styles for content image button wrap */
+    .content-image-btnwrap {
+      font-size: 20px;
+      text-align: center;
+      width: 50%;
+
+      /* Styles for button */
+      .btn {
+        color: #18a4df;
+        background-color: #fff;
+        text-align: left;
+        white-space: nowrap;
+        padding-left: 0px !important;
+        padding-top: 3px;
+
+        /* Styles for SVG icon */
+        svg {
+          width: 4%;
+          padding-left: 4px;
+          color: #24a7e0;
+        }
+      }
+    }
+
+    /* Styles for feature image */
+    #feature-image {
+      width: 497px;
+      height: 413px;
+
+      /* Styles for image */
+      img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        object-position: right;
+      }
+    }
+  }
+
+  /* Media query for responsiveness */
+  @media screen and (max-width: 980px) {
+    /* Adjusted styles for list items */
+    .list-items {
+      ul {
+        padding-right: 15% !important;
+      }
+    }
+  }
 }
